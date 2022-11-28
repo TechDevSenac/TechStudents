@@ -10,8 +10,7 @@ namespace TechStudents.Utils.DataBase
         /// User: Usuário de login no banco
         /// Password: Senha de login no banco
         /// </summary>
-        public const string DBConnection = @"Data Source=BNU-NT005159;Initial catalog=TechStudents_DB;User=sa;Password=benner;Trusted_Connection=True;";
-        //public const string DBConnection = @"Data Source=BUE205D017\SQLEXPRESS;Initial catalog=TechStudents_DB;User=sa;Password=Senac@2021;Trusted_Connection=True;";
+        public const string DBConnection = "Data Source=;Initial catalog=;User=;Password=;Trusted_Connection=True;";
 
         public static void TestarBanco()
         {
