@@ -1,0 +1,32 @@
+﻿@model UserModel
+@{
+    ViewData["Title"] = "Users";
+}
+<div>
+    <h3 class="text-center">Updating Users</h3>
+    <form asp-controller="Users" asp-action="Update" method="post">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" asp-for="Name">
+        </div>
+        <div class="form-group">
+            <label for="nickname">Nickname:</label>
+            <input type="text" class="form-control" asp-for="NickName">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password:</label>
+            <input type="password" class="form-control" id="password" asp-for="Password" value="00000000">
+        </div>
+        <div class="form-group">
+            <label for="acesstype">Access Type:</label>
+            <select id="accessType" class="form-select" asp-for="LoginType">
+                <option value="10">Administrator</option>
+                <option value="20">Teacher</option>
+                <option value="30">Student</option>
+            </select>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a class="btn btn-secondary" asp-controller="Users" asp-action="Index">Back</a>
+    </form>
+</div>

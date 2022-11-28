@@ -1,0 +1,14 @@
+﻿@model UserModel
+@{
+    ViewData["Title"] = "Users";
+} 
+
+<div class="text-center">
+    <h3 >Delete Confirmation</h3>
+    <form asp-controller="Users" asp-action="Delete" method="post">
+        <p>Are you sure about deleting @Model.NickName user?</p>
+
+        <a class="btn btn-danger" asp-controller="Users" asp-action="Index">No</a>
+        <button type="submit" class="btn btn-primary">Yes</button>
+    </form>
+</div>
