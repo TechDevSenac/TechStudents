@@ -18,6 +18,11 @@ namespace TechStudents.Web.Controllers
             return View();
         }
 
+        public ActionResult Login()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
