@@ -8,6 +8,11 @@ namespace TechStudents.Web.Controllers
     {
         public IActionResult Index()
         {
+            if (LoginControl._UserLogged == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+
             var model = new UsersModel();
             return View(model);
         }

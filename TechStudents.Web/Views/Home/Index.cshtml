@@ -1,8 +1,13 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Página Inicial";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Bem-vindo, <b>@LoginControl._UserLogged.Name</b>!</h1>
+    <p>
+        Este sistema está sendo utilizado para aprendermos sobre o MVC.
+    </p>
+    <p>
+        Seu login foi realizado utilizando o apelido <b>@LoginControl._UserLogged.NickName</b>.
+    </p>
 </div>

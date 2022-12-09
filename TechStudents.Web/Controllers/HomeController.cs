@@ -17,6 +17,12 @@ namespace TechStudents.Web.Controllers
             return View();
         }
 
+        public ActionResult Logoff()
+        {
+            LoginControl._UserLogged = null;
+            return RedirectToAction("Index");
+        }
+
         public ActionResult Login()
         {
             if (LoginControl._UserLogged != null)
