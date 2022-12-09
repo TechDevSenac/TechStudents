@@ -34,7 +34,7 @@ namespace TechStudents.Utils.Entities
         public LoginType LoginType { get; set; }
 
         public User() { }
-        public User(int id) 
+        public User(int id)
         {
             using (var conn = new SqlConnection(DBInfo.DBConnection))
             {
@@ -159,7 +159,8 @@ namespace TechStudents.Utils.Entities
                     while (reader.Read())
                     {
                         var id = reader.GetInt32(0);
-                        list.Add(new User() {
+                        list.Add(new User()
+                        {
                             ID = id,
                             Password = reader.GetString(1),
                             Blocked = reader.GetString(2) == "X",
